@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {"resourceGroup": {
+        "type": "string",
+        "metadata": {
+            "description": "my first resourcegroup"
+        }
+    }},
+    "functions": [],
+    "variables": {},
+    "resources": [{
+        "name": "[parameters( 'resourceGroup')]",
+        "type": "Microsoft.Genomics/accounts",
+        "apiVersion": "2017-08-01-preview",
+        "location": "eastus",
+        "dependsOn": [],
+        "tags": {}
+    }],
+    "outputs": {}
+}
